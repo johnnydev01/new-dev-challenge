@@ -1,12 +1,38 @@
-import { Component } from '@angular/core';
+import { AsyncPipe, CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { CategoryService, Root } from '../../services/category.service';
+import { map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [
+    MatToolbarModule,
+    CommonModule,
+    RouterLink,
+    AsyncPipe,
+    MatButtonModule
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
 
+  constructor(private categoryService: CategoryService) {}
+
+  resources$!: Observable<Root[]>;
+
+
+  ngOnInit(): void {
+    this.resources$ = this.categoryService.getRoot();
+  }
+
+
+  getRoot() {
+
+  }
 }

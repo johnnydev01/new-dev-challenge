@@ -1,3 +1,3 @@
 export const environment = {
-  swapiBaseUrl: 'https://swapi.co/api'
+  swapiBaseUrl: 'https://swapi.dev/api/'
 };

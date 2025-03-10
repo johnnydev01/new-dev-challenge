@@ -1,1 +1,15 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="border-bottom">
+    <div class="toolbar-container">
+      <a [routerLink]="['/']" class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1280px-Star_Wars_Logo.svg.png">
+      </a>
+      <div class="category-container">
+        @for(resource of resources$ | async; track $index) {
+          <a mat-button [routerLink]="['/' + resource.category]"> {{resource.category | titlecase }} </a>
+        }
+      </div>
+
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
