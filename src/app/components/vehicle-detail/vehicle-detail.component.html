@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h3>Star Wars Detalhes</h3>
+
+    <mat-card class="card-container">
+      <div class="title-container">
+        <div class="back-button-container" (click)="back()">
+          <mat-icon class="back-icon" aria-hidden="false" fontIcon="arrow_back"></mat-icon>
+        </div>
+        <mat-card-title >{{title}}</mat-card-title>
+      </div>
+      <mat-card-header>
+        <mat-card-subtitle class="name">Nome: {{vehicle.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="content">
+        <p>Modelo: {{vehicle.model}}</p>
+        <p>Passageiros: {{vehicle.passengers}}</p>
+        <p>Velocidade máxima atmosférica: {{vehicle.max_atmosphering_speed}}</p>
+        <p>Fabricante: {{vehicle.manufacturer}}</p>
+        <mat-divider></mat-divider>
+        <p>Que a força esteja com você!</p>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+    </mat-card>
+</div>
+

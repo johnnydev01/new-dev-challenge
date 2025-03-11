@@ -8,6 +8,8 @@ import { FilmComponent } from './components/film/film.component';
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
 import { SpeciesComponent } from './components/species/species.component';
 import { SpeciesDetailComponent } from './components/species-detail/species-detail.component';
+import { VehicleComponent } from './components/vehicle/vehicle.component';
+import { VehicleDetailComponent } from './components/vehicle-detail/vehicle-detail.component';
 
 type PathMatch = "full" | "prefix" | undefined;
 
@@ -54,5 +56,14 @@ export const routes: Routes = [
   {
     path: 'species-detail',
     component: SpeciesDetailComponent,
+  },
+  {
+    path: 'vehicles',
+    component: VehicleComponent,
+    title: 'Vehicles'
+  },
+  {
+    path: 'vehicle-detail',
+    component: VehicleDetailComponent,
   }
 ];

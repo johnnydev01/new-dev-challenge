@@ -20,27 +20,26 @@ import { SpeciesCardComponent } from '../species-card/species-card.component';
 })
 export class SpeciesComponent {
 
+  private speciesService = inject(SpeciesService);
+  public species!: Species[]
+  public speciesData =  Array<Data>();
 
-   private speciesService = inject(SpeciesService);
-      public species!: Species[]
-      public speciesData =  Array<Data>();
+  ngOnInit() {
+    this.getSpecies();
+  }
 
-      ngOnInit() {
-        this.getSpecies();
-      }
-
-      getSpecies() {
-        this.speciesService.getSpecies()
-        .subscribe({
-          next: (species: Species[]) => {
-            this.species = species;
-            species.map((item) => {
-              this.speciesData.push({
-                name: item.name,
-                url: item.url
-              })
-            })
-          }
+  getSpecies() {
+    this.speciesService.getSpecies()
+    .subscribe({
+      next: (species: Species[]) => {
+        this.species = species;
+        species.map((item) => {
+          this.speciesData.push({
+            name: item.name,
+            url: item.url
+          })
         })
       }
+    })
+  }
 }
