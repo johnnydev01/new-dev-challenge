@@ -3,11 +3,11 @@
   <h3>Star Wars Detalhes</h3>
 
     <mat-card class="card-container">
-      <div class="title">
+      <div class="title-container">
         <div class="back-button-container" (click)="back()">
           <mat-icon class="back-icon" aria-hidden="false" fontIcon="arrow_back"></mat-icon>
         </div>
-        <mat-card-title class="title">{{title}}</mat-card-title>
+        <mat-card-title >{{title}}</mat-card-title>
       </div>
       <mat-card-header>
         <mat-card-subtitle class="name">Nome: {{person.name}}</mat-card-subtitle>
@@ -17,6 +17,7 @@
         <p>Massa: {{person.mass}}</p>
         <p>Altura: {{person.height}} cm</p>
         <p>Cor do cabelo: {{person.hair_color}}</p>
+        <mat-divider></mat-divider>
         <p>Que a força esteja com você!</p>
       </mat-card-content>
       <mat-divider></mat-divider>
