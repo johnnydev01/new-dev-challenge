@@ -1,0 +1,8 @@
+
+@defer {
+  <app-starship-card  [data]="starshipsData"></app-starship-card>
+} @loading {
+  <app-loading></app-loading>
+} @error {
+  <p>Falha ao carregar o componente.</p>
+}

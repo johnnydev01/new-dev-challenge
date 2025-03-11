@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h3>Star Wars Films</h3>
+  <h3>Star Wars Starships</h3>
     <mat-card class="card-container">
       <mat-card-header>
         <mat-card-title>{{title}}</mat-card-title>
@@ -9,7 +9,7 @@
         <ul>
           @for(item of data; track item.name) {
             <li>
-              <a [routerLink]="['/film-detail']" [state]="{url: item.url}">
+              <a [routerLink]="['/starship-detail']" [state]="{url: item.url}">
                 <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
               </a>
             </li>

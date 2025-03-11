@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-container{
+  max-width: 400px;
+  ul {
+    display: flex;
+    padding-left: 0;
+    flex-direction: column;
+    li {
+      list-style-type: none;
+      padding: 4px 0;
+      a {
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.instruction {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.mat-mdc-card-header {
+  flex-direction: column;
+}

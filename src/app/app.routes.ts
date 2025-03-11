@@ -10,6 +10,8 @@ import { SpeciesComponent } from './components/species/species.component';
 import { SpeciesDetailComponent } from './components/species-detail/species-detail.component';
 import { VehicleComponent } from './components/vehicle/vehicle.component';
 import { VehicleDetailComponent } from './components/vehicle-detail/vehicle-detail.component';
+import { StarshipComponent } from './components/starship/starship.component';
+import { StarshipDetailComponent } from './components/starship-detail/starship-detail.component';
 
 type PathMatch = "full" | "prefix" | undefined;
 
@@ -65,5 +67,14 @@ export const routes: Routes = [
   {
     path: 'vehicle-detail',
     component: VehicleDetailComponent,
+  },
+  {
+    path: 'starships',
+    component: StarshipComponent,
+    title: 'Starships'
+  },
+  {
+    path: 'starship-detail',
+    component: StarshipDetailComponent,
   }
 ];
