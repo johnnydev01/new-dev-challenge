@@ -1,5 +1,5 @@
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -22,7 +22,7 @@ import { map, Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit{
 
-  constructor(private categoryService: CategoryService) {}
+  private categoryService = inject(CategoryService);
 
   resources$!: Observable<Root[]>;
 
@@ -31,8 +31,4 @@ export class HeaderComponent implements OnInit{
     this.resources$ = this.categoryService.getRoot();
   }
 
-
-  getRoot() {
-
-  }
 }

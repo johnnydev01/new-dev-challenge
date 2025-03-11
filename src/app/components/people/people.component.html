@@ -1,0 +1,8 @@
+
+@defer {
+  <app-people-card  [data]="peopleData"></app-people-card>
+} @loading {
+  <app-loading></app-loading>
+} @error {
+  <p>Failed to load large component.</p>
+}

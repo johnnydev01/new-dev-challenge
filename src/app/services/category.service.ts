@@ -31,4 +31,9 @@ export class CategoryService {
     )
     );
   }
+
+  getResource<T>(resourceUrl: string): Observable<T> {
+    return this.http.get<T>(resourceUrl);
+  }
+
 }
