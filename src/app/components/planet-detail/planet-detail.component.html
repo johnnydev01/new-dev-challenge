@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h3>Star Wars Detalhes</h3>
+
+    <mat-card class="card-container">
+      <div class="title-container">
+        <div class="back-button-container" (click)="back()">
+          <mat-icon class="back-icon" aria-hidden="false" fontIcon="arrow_back"></mat-icon>
+        </div>
+        <mat-card-title >{{title}}</mat-card-title>
+      </div>
+      <mat-card-header>
+        <mat-card-subtitle class="name">Nome: {{planet.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="content">
+        <p>População: {{planet.population}}</p>
+        <p>Gravidade: {{planet.gravity}}</p>
+        <p>Diâmetro: {{planet.diameter}}</p>
+        <p>Perído de rotação: {{planet.rotation_period}}</p>
+        <mat-divider></mat-divider>
+        <p>Que a força esteja com você!</p>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+    </mat-card>
+</div>
+

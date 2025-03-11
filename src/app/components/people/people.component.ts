@@ -1,10 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { PeopleService } from '../../services/people.service';
-import { PeopleData, Person } from '../../interfaces/person';
+import { Person } from '../../interfaces/person';
 import { AsyncPipe } from '@angular/common';
 import { LoadingComponent } from '../loading/loading.component';
 
 import { PeopleCardComponent } from '../people-card/people-card.component';
+import { Data } from '../../interfaces/category';
 
 
 @Component({
@@ -23,7 +24,7 @@ export class PeopleComponent implements OnInit {
 
   private peopleService = inject(PeopleService);
   public people!: Person[]
-  public peopleData =  Array<PeopleData>();
+  public peopleData =  Array<Data>();
 
 
   ngOnInit() {

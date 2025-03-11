@@ -17,7 +17,4 @@ export interface Person {
   vehicles: string[];
 }
 
-export interface PeopleData {
-  name: string;
-  url: string;
-}
+

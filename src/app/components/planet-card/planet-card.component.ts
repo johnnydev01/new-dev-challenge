@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { Data } from '../../interfaces/category';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterLink } from '@angular/router';
-import { Data } from '../../interfaces/category';
 
 @Component({
-  selector: 'app-people-card',
+  selector: 'app-planet-card',
   standalone: true,
   imports: [
     MatCardModule,
@@ -14,14 +14,13 @@ import { Data } from '../../interfaces/category';
     MatButtonModule,
     RouterLink
   ],
-  templateUrl: './people-card.component.html',
-  styleUrl: './people-card.component.scss'
+  templateUrl: './planet-card.component.html',
+  styleUrl: './planet-card.component.scss'
 })
-export class PeopleCardComponent {
+export class PlanetCardComponent {
 
-  @Input() data!: Data[];
+ @Input() data!: Data[];
 
-  public title = "People"
-  public subtitle = "personagem";
-
+  public title = "Planets"
+  public subtitle = "planeta";
 }
