@@ -1,0 +1,25 @@
+
+<div class="container">
+  <h3>Star Wars Detalhes</h3>
+
+    <mat-card class="card-container">
+      <div class="title-container">
+        <div class="back-button-container" (click)="back()">
+          <mat-icon class="back-icon" aria-hidden="false" fontIcon="arrow_back"></mat-icon>
+        </div>
+        <mat-card-title >{{title}}</mat-card-title>
+      </div>
+      <mat-card-header>
+        <mat-card-subtitle class="name">Nome: {{film.title}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="content">
+        <p>Produtor: {{film.producer}}</p>
+        <p>Diretor: {{film.director}}</p>
+        <p>Data delnçamento: {{film.release_date| date : 'dd/MM/yyyy'}}</p>
+        <mat-divider></mat-divider>
+        <p>Que a força esteja com você!</p>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+    </mat-card>
+</div>
+

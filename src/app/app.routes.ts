@@ -4,6 +4,8 @@ import { PeopleComponent } from './components/people/people.component';
 import { PeopleDetailComponent } from './components/people-detail/people-detail.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { PlanetDetailComponent } from './components/planet-detail/planet-detail.component';
+import { FilmComponent } from './components/film/film.component';
+import { FilmDetailComponent } from './components/film-detail/film-detail.component';
 
 type PathMatch = "full" | "prefix" | undefined;
 
@@ -32,5 +34,14 @@ export const routes: Routes = [
   {
     path: 'planet-detail',
     component: PlanetDetailComponent,
+  },
+  {
+    path: 'films',
+    component: FilmComponent,
+    title: 'Films'
+  },
+  {
+    path: 'film-detail',
+    component: FilmDetailComponent,
   }
 ];
