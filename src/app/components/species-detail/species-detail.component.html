@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h3>Star Wars Detalhes</h3>
+
+    <mat-card class="card-container">
+      <div class="title-container">
+        <div class="back-button-container" (click)="back()">
+          <mat-icon class="back-icon" aria-hidden="false" fontIcon="arrow_back"></mat-icon>
+        </div>
+        <mat-card-title >{{title}}</mat-card-title>
+      </div>
+      <mat-card-header>
+        <mat-card-subtitle class="name">Nome: {{species.name}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content class="content">
+        <p>Linguagem: {{species.language}}</p>
+        <p>Cor da pele: {{species.skin_colors}}</p>
+        <p>Cor do cabelo: {{species.hair_colors}}</p>
+        <p>Cor dos olhos: {{species.eye_colors}}</p>
+        <mat-divider></mat-divider>
+        <p>Que a força esteja com você!</p>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+    </mat-card>
+</div>
+

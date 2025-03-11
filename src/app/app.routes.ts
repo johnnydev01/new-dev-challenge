@@ -6,6 +6,8 @@ import { PlanetComponent } from './components/planet/planet.component';
 import { PlanetDetailComponent } from './components/planet-detail/planet-detail.component';
 import { FilmComponent } from './components/film/film.component';
 import { FilmDetailComponent } from './components/film-detail/film-detail.component';
+import { SpeciesComponent } from './components/species/species.component';
+import { SpeciesDetailComponent } from './components/species-detail/species-detail.component';
 
 type PathMatch = "full" | "prefix" | undefined;
 
@@ -43,5 +45,14 @@ export const routes: Routes = [
   {
     path: 'film-detail',
     component: FilmDetailComponent,
+  },
+  {
+    path: 'species',
+    component: SpeciesComponent,
+    title: 'Species'
+  },
+  {
+    path: 'species-detail',
+    component: SpeciesDetailComponent,
   }
 ];

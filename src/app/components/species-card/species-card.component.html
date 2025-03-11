@@ -1,0 +1,25 @@
+
+<div class="container">
+  <h3>Star Wars Species</h3>
+    <mat-card class="card-container">
+      <mat-card-header>
+        <mat-card-title>{{title}}</mat-card-title>
+        <p class="instruction">Clique em um {{subtitle}} para ver mais detalhes</p>
+
+        <ul>
+          @for(item of data; track item.name) {
+            <li>
+              <a [routerLink]="['/species-detail']" [state]="{url: item.url}">
+                <mat-card-subtitle>{{item.name}}</mat-card-subtitle>
+              </a>
+            </li>
+            }
+        </ul>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p>Que a força esteja com você!</p>
+      </mat-card-content>
+    </mat-card>
+</div>
+
